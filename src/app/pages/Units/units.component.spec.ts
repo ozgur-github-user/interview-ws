@@ -136,9 +136,25 @@ describe('UnitsComponent', () => {
     fixture.detectChanges();
   });
 
-  // it('should create', () => {
-  //   expect(component).toBeTruthy();
-  // });
+  it('should create', () => {
+    const mockFilterParams = JSON.stringify({
+      filterRanges: {
+        wood: { min: 10, max: 100 },
+        food: { min: 20, max: 200 },
+        gold: { min: 30, max: 200 }
+      },
+      filterState: {
+        wood: true,
+        food: true,
+        gold: true
+      },
+      age: 'all'
+    });
+  
+    // Set localStorage manually
+    localStorage.setItem('filterParams', mockFilterParams);
+    expect(component).toBeTruthy();
+  });
 
   it('should fetch units by store', ()=> {
     spyOn(component, 'getUnitsByStore').and.callThrough();
