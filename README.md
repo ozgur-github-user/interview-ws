@@ -18,7 +18,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Coverage summary = Statements: 93.75% ( 90/96 )  /  Branches: 73.07% ( 19/26 )  /  Functions    : 92.1% ( 35/38 )  /  Lines: 93.02% ( 80/86 )
+Coverage summary = Statements: 93.75% ( 90/96 )  /  Branches: 73.07% ( 19/26 )  /  Functions    : 92.1% ( 35/38 )  /  Lines: 93.02% ( 80/86 )
 
 ## Running end-to-end tests
 
