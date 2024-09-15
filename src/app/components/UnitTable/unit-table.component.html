@@ -1,0 +1,18 @@
+<div class="unit-table-container">
+  <table >
+    <thead>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Costs</th>
+    </thead>
+    <tbody>
+      <tr name="data-row" *ngFor="let unit of units;" (click)="onUpdate(unit)">
+        <td>{{unit.id}}</td>
+        <td>{{unit.name}}</td>
+        <td>{{unit.age}}</td>
+        <td>{{ generateCostInfo(unit) }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

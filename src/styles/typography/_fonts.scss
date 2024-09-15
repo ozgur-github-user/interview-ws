@@ -1,0 +1,17 @@
+$default-font-family: Montserrat, "Helvetica Neue", sans-serif;
+$page-title-font-size: 40px;
+$title-font-size: 24px;
+$font-bold: 700;
+
+@font-face {
+    font-family: Montserrat;
+    src: url('../../assets/font/Montserrat-Regular.ttf') format('truetype');
+}
+
+.title {
+    color: $white;
+    font-size: $page-title-font-size;
+    font-weight: $font-bold;
+    text-align: center;
+    margin-top: 20px;
+}

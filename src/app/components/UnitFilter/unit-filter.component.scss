@@ -1,0 +1,44 @@
+@import 'abstracts/variables';
+@import 'abstracts/colors';
+
+.unit-filter {
+  .cost-filters {
+    margin-top: 30px;
+  }
+
+  .age-filters {
+    margin-top: 30px;
+    margin-left: 10px;
+  }
+
+  .food-filter_text,
+  .wood-filter_text,
+  .gold-filter_text { 
+    display: inline-block;
+    width: 50px;
+      
+  }
+
+  .slider {
+    width: $slider-width;
+    margin-left: 20px;
+  }
+
+  .wood-result,
+  .food-result,
+  .gold-result {
+    margin-left: 10px;
+  }
+}
+
+.mat-button-toggle-checked {
+  background-color: $togglr-button-bg !important;
+}
+
+.mat-button-toggle-group{
+  border-radius: 0px !important;
+}
+
+::ng-deep .mat-primary .mdc-slider__track--inactive {
+  background-color: white !important;
+}

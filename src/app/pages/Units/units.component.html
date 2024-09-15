@@ -1,0 +1,7 @@
+<p class="title">Units Page</p>
+<div class="content">
+  <app-unit-filter (filterChange)="filterChanged($event)"/>
+  <app-unit-table [units]="filteredUnits"/>
+</div>
+
+

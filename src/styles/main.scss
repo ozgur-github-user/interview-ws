@@ -1,0 +1,22 @@
+/* Global styles added to this file */
+@import './abstracts/colors';
+@import './abstracts/_variables';
+@import './typography/fonts';
+@import './layouts/layouts';
+  
+  * { margin: 0; font-family: $default-font-family; color: $white }
+    
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+
+  body {
+    min-height: calc(100vh - 60px);
+    background-color: $body-bgcolor;
+  }
+    
+  
+    
+  
+  

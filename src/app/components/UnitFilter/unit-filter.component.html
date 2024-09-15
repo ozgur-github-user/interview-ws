@@ -1,0 +1,75 @@
+<div class="unit-filter">
+  <h1>Ages</h1>
+
+  <div class="age-filters">
+    <mat-button-toggle-group
+      (change)="onAgeChange($event)"
+      [value]="filterParams.age"
+      name="favoriteColor"
+      aria-label="Favorite Color"
+      [hideSingleSelectionIndicator]="true">
+
+      <mat-button-toggle value="all">All</mat-button-toggle>
+      <mat-button-toggle value="Dark">Dark</mat-button-toggle>
+      <mat-button-toggle value="Feudal">Feudal</mat-button-toggle>
+      <mat-button-toggle value="Castle">Castle</mat-button-toggle>
+      <mat-button-toggle value="Imperial">Imperial</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+
+  <div class="cost-filters">
+    <h1>Costs</h1>
+      <div class="wood-filter">
+        <mat-checkbox name="wood"
+          [checked]="filterParams.filterState.wood"
+          (change)="onFilterActivated($event, 'wood')">
+        </mat-checkbox>
+        <span class="wood-filter_text">Wood</span>
+        <mat-slider class="slider"  min="0" max="200"  [disabled]="!filterParams.filterState.wood">
+          <input name="woodMinValue"
+            matSliderStartThumb
+            (dragEnd)="sliderOnChange('wood')"
+            [(ngModel)]="filterParams.filterRanges.wood.min">
+          <input matSliderEndThumb
+            (dragEnd)="sliderOnChange('wood')"
+            [(ngModel)]="filterParams.filterRanges.wood.max">
+        </mat-slider>
+
+        <span class="wood-result"> {{ filterParams.filterRanges.wood.min }} - {{filterParams.filterRanges.wood.max}}</span>
+      </div>
+      <div class="food-filter">
+        <mat-checkbox name="food"
+          [checked]="filterParams.filterState.food"
+          (change)="onFilterActivated($event, 'food')">
+        </mat-checkbox>
+        <span class="food-filter_text">Food</span>
+        <mat-slider class="slider" min="0" max="200" [disabled]="!filterParams.filterState.food">
+          <input value="0"
+            matSliderStartThumb
+            (dragEnd)="sliderOnChange('food')"
+            [(ngModel)]="filterParams.filterRanges.food.min">
+          <input value="200"
+            matSliderEndThumb
+            (dragEnd)="sliderOnChange('food')"
+            [(ngModel)]="filterParams.filterRanges.food.max">
+        </mat-slider>
+        <span class="food-result"> {{ filterParams.filterRanges.food.min }} - {{ filterParams.filterRanges.food.max}}</span>
+      </div>
+      <div class="gold-filter">
+        <mat-checkbox name="gold" [checked]="filterParams.filterState.gold" (change)="onFilterActivated($event, 'gold')"></mat-checkbox>
+        <span class="gold-filter_text">Gold</span>
+        <mat-slider class="slider" min="0" max="200" [disabled]="!filterParams.filterState.gold">
+          <input value="0"
+            matSliderStartThumb
+            (dragEnd)="sliderOnChange('gold')"
+            [(ngModel)]="filterParams.filterRanges.gold.min">
+          <input value="200"
+            matSliderEndThumb
+            (dragEnd)="sliderOnChange('gold')"
+            [(ngModel)]="filterParams.filterRanges.gold.max">
+        </mat-slider>
+        <span class="gold-result"> {{ filterParams.filterRanges.gold.min }} - {{ filterParams.filterRanges.gold.max}}</span>
+      </div>
+  </div>
+</div>
+
